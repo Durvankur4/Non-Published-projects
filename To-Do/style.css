@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+.container {
+    margin-top: 7rem;
+    width: 360px;
+
+}
+
+#inputField {
+    height: 2rem;
+    width: 20rem;
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+#addToDo {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+#toDoContainer {
+    margin-top: 2rem;
+}
+
+.paragraph-styling {
+    font-size: .75rem;
+    margin: 0;
+    cursor: pointer;
+}
