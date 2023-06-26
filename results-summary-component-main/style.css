@@ -1,0 +1,238 @@
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-slate-blue-1: hsla(0, 0%, 100%, 0);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 1);
+
+    --White: hsl(0, 0%, 100%, .75);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family: Hanken Grostek;
+    font-display: swap;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grostek';
+    font-size: 800;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.card-main {
+
+    margin: 1rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-auto-flow: column;
+    overflow: hidden;
+
+}
+
+
+
+/* ----------Result-card---------- */
+
+.card-component-result {
+    border-radius: 1rem;
+    background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    color: var(--White);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    align-content: start;
+    width: 300px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-component-result h1 {
+    padding: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.circle-class {
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    padding: 2rem 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-slate-blue-1));
+}
+
+.circle-class span {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+}
+
+.your-result-description {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1.5rem 0;
+    width: 14rem;
+
+}
+
+.your-result-description span {
+    padding: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+/* ----------Summary-card---------- */
+
+.card-component-summary {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--Pale-blue);
+}
+
+.summary-component {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-component-summary h2 {
+    padding: 1.5rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+.summary-div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.summary-component {
+    padding: .5rem 1rem;
+}
+
+.summary-component p {
+    color: grey;
+}
+
+.summary-component p>span {
+    font-weight: 700;
+    color: black;
+}
+
+/* ------------- */
+.reaction {
+    margin: 1rem;
+    border-radius: .75rem;
+    background-color: hsla(0, 100%, 67%, .05);
+}
+
+.reaction span {
+    color: var(--Light-red);
+}
+
+.memory {
+    margin: 1rem;
+    border-radius: .75rem;
+    background-color: hsla(39, 100%, 56%, .05);
+}
+
+.memory span {
+    color: var(--Orangey-yellow);
+}
+
+.verbal {
+    margin: 1rem;
+    border-radius: .75rem;
+    background-color: hsla(166, 100%, 37%, .05);
+}
+
+.verbal span {
+    color: var(--Green-teal);
+}
+
+.visual {
+    margin: 1rem;
+    border-radius: .75rem;
+    background-color: hsla(234, 85%, 45%, .05);
+}
+
+.visual span {
+    color: var(--Cobalt-blue);
+}
+
+.btn {
+    color: white;
+    background: var(--Dark-gray-blue);
+    padding: .75rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+btn:hover {
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+
+}
+
+
+/* ----------Media-querry---------- */
+
+@media screen and (max-width:500px) {
+
+    body {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .card-main {
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+        scroll-behavior: smooth;
+
+    }
+
+    .card-component-result {
+        overflow: hidden;
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+
+    .card-component-summary {
+
+        width: 100%;
+    }
+}
